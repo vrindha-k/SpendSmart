@@ -1,5 +1,7 @@
 # SpendSmart
 
+[![SpendSmart checks](https://github.com/vrindha-k/SpendSmart/actions/workflows/ci.yml/badge.svg)](https://github.com/vrindha-k/SpendSmart/actions/workflows/ci.yml)
+
 ### A clearer picture of your money.
 
 A local-first finance workbench built with **React + TypeScript and Python + FastAPI**. Turn supported Chase statement PDFs into searchable transactions, interactive analytics, and optional, consent-based Claude savings suggestions.
@@ -29,7 +31,11 @@ Demo mode seeds **198 deterministic synthetic transactions across May–October 
 
 Install **Python 3.12+**, **Node.js 24 LTS**, **Git**, and **VS Code**. Select Python's “Add python.exe to PATH” installer option. Open the `SpendSmart` folder in VS Code. Open two PowerShell terminals using **Terminal → New Terminal**.
 
-To clone, copy this repository's HTTPS URL from its green **Code** button, run `git clone <copied-url>`, then `cd SpendSmart` and `code .`.
+```powershell
+git clone https://github.com/vrindha-k/SpendSmart.git
+cd SpendSmart
+code .
+```
 
 ### Terminal 1 — backend
 
@@ -162,6 +168,8 @@ The AI boundary uses an **allowlist**, rather than assuming regex scrubbed every
 npm.cmd test
 npm.cmd run build
 ```
+
+Verified locally: **17 backend tests, 5 frontend tests, strict TypeScript checks, and the Vite production build pass**. The first GitHub Actions run also passed both jobs.
 
 GitHub Actions runs separate Python 3.12 and Node 24 jobs for pushes and pull requests. Tests use in-memory SQLite, generated synthetic PDFs, and mocked Claude responses. CI requires neither API keys nor personal documents.
 
