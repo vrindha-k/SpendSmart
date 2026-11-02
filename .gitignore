@@ -1,0 +1,29 @@
+# Secrets and user financial information
+.env
+.env.*
+!.env.example
+**/data/
+**/uploads/
+**/statements/
+*.db
+*.db-*
+*.sqlite*
+*.pdf
+*.csv
+*.xlsx
+*.pem
+*.key
+# Local dependencies and generated output
+.venv/
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.tsbuildinfo
+coverage/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+.DS_Store
+Thumbs.db
